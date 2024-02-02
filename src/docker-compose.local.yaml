@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    volumes:
+      - pg_data:/var/lib/postgres/data
+      - .\src\main\resources\db\init.sql:/docker-entrypoint-initdb.d/init.sql
+  pgAdmin:
+    image: dpage/pgadmin4
+    ports:
+      - "8888:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    volumes:
+      - pgAdmin_data:/var/lib/pgadmin/data
+    depends_on:
+      - postgres
+
+volumes:
+  pg_data:
+    driver:
+      local
+  pgAdmin_data:
