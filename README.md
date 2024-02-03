@@ -12,7 +12,7 @@ docker-compose -f docker-compose.local.yaml up
 Set `POSTGRES_URL`, `POSTGRES_USERNAME` and `POSTGRES_PASSWORD` variables. If that is not possible, hardcode those in `resources/application.properties`.
 <br />
 Hardcoded properties (for local development):
-```properties
+```
 server.servlet.context-path = /api
 
 spring.datasource.url = jdbc:postgresql://localhost:5432/primary
@@ -21,8 +21,6 @@ spring.datasource.password = admin
 
 spring.jpa.hibernate.ddl-auto = validate
 
-# Flyway properties
-
 spring.flyway.enabled = true
 spring.flyway.url = jdbc:postgresql://localhost:5432/primary
 spring.flyway.password = admin
@@ -30,7 +28,6 @@ spring.flyway.user = admin
 spring.flyway.schemas = public
 spring.flyway.locations = classpath:db/migration
 
-# Auth
 auth.jwt.secret = TVXrlxZ5Hy2/5MIW5mgWjkDOLETqJMk/HqIH7gmjkzeomDznahEv22ub7MRLzwdgcE/TFFaJTpb+CkzCAR25RQ==
 auth.jwt.max-age = 600
 ```
