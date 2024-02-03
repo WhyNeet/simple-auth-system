@@ -1,7 +1,5 @@
 package dev.whyneet.authsystem.api.exception;
 
-import org.springframework.http.HttpStatus;
-
 import java.util.List;
 
 public class ApiError {

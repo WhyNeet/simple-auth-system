@@ -1,4 +1,4 @@
-package dev.whyneet.authsystem.api.model;
+package dev.whyneet.authsystem.api.model.register;
 
 import dev.whyneet.authsystem.api.validation.ValidUsername;
 import jakarta.validation.constraints.NotNull;
