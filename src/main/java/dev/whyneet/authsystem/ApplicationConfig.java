@@ -27,6 +27,6 @@ public class ApplicationConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new Argon2PasswordEncoder(64, 128, 2, 60000, 10);
+        return new Argon2PasswordEncoder(32, 64, 2, 60000, 10);
     }
 }
