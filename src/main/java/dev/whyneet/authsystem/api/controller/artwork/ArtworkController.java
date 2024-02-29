@@ -36,8 +36,12 @@ public class ArtworkController {
         Drawable drawable = null;
 
         switch (artworkShape) {
-            case ArtworkShape.Rectangle -> drawable = new Rectangle(3, 3, 4, 4);
-            case ArtworkShape.Triangle -> drawable = new Triangle(3, 3, 4);
+            case ArtworkShape.Rectangle:
+                drawable = new Rectangle(3, 3, 4, 4);
+                break;
+            case ArtworkShape.Triangle:
+                drawable = new Triangle(3, 3, 4);
+                break;
         }
 
         artwork.draw(drawable);
