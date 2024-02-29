@@ -8,10 +8,12 @@ git clone https://github.com/WhyNeet/simple-auth-system.git
 ```shell
 docker-compose -f docker-compose.local.yaml up
 ```
-3. Setup the environment.<br />
+3. Setup the environment.
+<br />
 Set `POSTGRES_URL`, `POSTGRES_USERNAME` and `POSTGRES_PASSWORD` variables. If that is not possible, hardcode those in `resources/application.properties`.
 <br />
 Hardcoded properties (for local development):
+
 ```
 server.servlet.context-path = /api
 
